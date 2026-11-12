@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於｜木白室內設計 MuBai Studio｜品牌故事・設計團隊・工作室</title>
+  <meta name="description" content="認識木白室內設計：15 年住宅空間專業、12 人設計團隊、320+ 完工案例。看品牌故事、團隊成員與工作室空間，預約免費諮詢。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231C1B1A'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23F7F5F2' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1C1B1A', 'ink-hover': '#000000',
+            clay: '#A65E3F', 'clay-hover': '#8A4B30', 'clay-tint': '#F4EAE3',
+            mist: '#F7F5F2', linen: '#EDE9E3',
+            stone: '#A9A29A', ash: '#6E675F', slate: '#3D3A36',
+            danger: '#B0413E', success: '#3F7D54', warn: '#B08A2E'
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'Inter', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', '"Noto Sans TC"', 'serif'],
+            inter: ['Inter', 'sans-serif']
+          },
+          spacing: { 1: '4px', 2: '8px', 3: '12px', 4: '16px', 5: '24px', 6: '32px', 7: '40px', 8: '48px', 9: '64px', 10: '80px', 11: '96px', 12: '128px' },
+          maxWidth: { 'content': '1152px' },
+          borderRadius: { sm: '2px', md: '6px', lg: '12px', full: '9999px' },
+          boxShadow: {
+            soft: '0 1px 2px rgba(28,27,26,.06), 0 4px 12px rgba(28,27,26,.08)',
+            lift: '0 8px 24px rgba(28,27,26,.14)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-mist font-sans text-slate">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-ink focus:px-4 focus:py-2 focus:text-mist">跳至主要內容</a>
+
+  <!-- NAV -->
+  <header id="site-nav" class="sticky top-0 z-50 bg-mist/95 backdrop-blur">
+    <div class="nav-inner mx-auto flex max-w-content items-center justify-between px-5 lg:px-8">
+      <a href="index.html" class="brand-mark flex items-center gap-3" aria-label="木白室內設計 首頁">
+        <svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true" class="brand-mark"><rect width="32" height="32" rx="6" fill="#1C1B1A"/><text x="16" y="22" font-family="Georgia,serif" font-size="18" fill="#F7F5F2" text-anchor="middle">M</text></svg>
+        <span class="text-lg font-bold text-ink">木白室內設計 <span class="font-serif text-sm text-ash">MuBai Studio</span></span>
+      </a>
+      <nav class="hidden items-center gap-6 lg:flex" aria-label="主導覽">
+        <a href="index.html" class="text-base text-slate hover:text-ink">首頁</a>
+        <a href="services.html" class="text-base text-slate hover:text-ink">服務</a>
+        <a href="works.html" class="text-base text-slate hover:text-ink">作品</a>
+        <a href="about.html" class="border-b-2 border-ink pb-1 text-base font-medium text-ink" aria-current="page">關於</a>
+        <a href="contact.html" class="text-base text-slate hover:text-ink">聯絡</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="tel:02-2312-8899" class="hidden font-inter tabular-nums text-base text-slate hover:text-clay lg:block" aria-label="致電 02-2312-8899">02-2312-8899</a>
+        <a href="contact.html" class="hidden rounded-md bg-clay px-6 py-3 text-base font-medium text-white transition-colors hover:bg-clay-hover active:scale-[.98] lg:block">預約諮詢</a>
+        <button id="drawer-open" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-md border border-linen bg-mist text-ink lg:hidden" aria-label="開啟選單" aria-expanded="false" aria-controls="drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 手機抽屜遮罩 -->
+  <div id="drawer-overlay" class="fixed inset-0 z-[60] bg-ink/50 lg:hidden" aria-hidden="true"></div>
+  <aside id="drawer" class="fixed right-0 top-0 z-[70] flex h-full w-[85vw] flex-col bg-mist shadow-lift lg:hidden" aria-label="手機選單">
+    <div class="flex h-16 items-center justify-between border-b border-linen px-5">
+      <span class="text-base font-bold text-ink">木白室內設計</span>
+      <button id="drawer-close" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-md border border-linen text-ink" aria-label="關閉選單">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="flex-1 py-4" aria-label="手機導覽">
+      <a href="index.html" class="flex h-16 items-center border-b border-linen px-5 text-xl text-slate">首頁</a>
+      <a href="services.html" class="flex h-16 items-center border-b border-linen px-5 text-xl text-slate">服務</a>
+      <a href="works.html" class="flex h-16 items-center border-b border-linen px-5 text-xl text-slate">作品</a>
+      <a href="about.html" class="flex h-16 items-center border-b border-linen px-5 text-xl font-medium text-ink" aria-current="page">關於</a>
+      <a href="contact.html" class="flex h-16 items-center border-b border-linen px-5 text-xl text-slate">聯絡</a>
+    </nav>
+    <div class="border-t border-linen p-5">
+      <a href="tel:02-2312-8899" class="block py-3 font-inter tabular-nums text-base text-slate">02-2312-8899</a>
+      <a href="contact.html" class="block rounded-md bg-clay px-6 py-3 text-center text-base font-medium text-white hover:bg-clay-hover">預約諮詢</a>
+    </div>
+  </aside>
+
+  <main id="main">
+    <!-- 1. 品牌故事 -->
+    <section class="border-b border-linen py-8 lg:py-11">
+      <div class="mx-auto grid max-w-content grid-cols-1 gap-8 px-5 lg:grid-cols-2 lg:items-center lg:gap-10 lg:px-8">
+        <div>
+          <p class="reveal text-sm font-medium tracking-wide text-clay">About MuBai</p>
+          <h1 class="reveal mt-4 text-4xl font-bold text-ink lg:text-[56px] lg:leading-[1.15]">以木為名，<span class="font-serif">以白為底</span></h1>
+          <p class="reveal mt-6 text-base leading-[1.7] text-slate">木白成立於 2011 年。創辦人林木白（主設計師）與白雨晨（副設計師）在同一間建築事務所認識，當時一個在畫結構、一個在做室內，兩人常為了「牆面該留白還是放木作」爭到下班。2011 年他們離開事務所自立門户，把「木」的溫度與「白」的克制帶進每一個住宅案。</p>
+          <p class="reveal mt-4 text-base leading-[1.7] text-slate">十五年來，木白完成 320+ 個住宅與商業空間，堅持自營施工、不外包、不趕工。我們的數字不好看：每年最多接 40 案、拒絕了上百個案——因為我們相信，做得少一點，才能做得深一點。</p>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae5b4ace?q=80&w=900&auto=format&fit=crop" alt="木白工作室：設計團隊在木紋桌前討論圖面" width="900" height="1125" loading="lazy" decoding="async" data-fallback class="reveal h-full w-full rounded-lg object-cover">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=900&auto=format&fit=crop" alt="木白工作室材質樣本牆：木皮、石材與織品樣板" width="900" height="1125" loading="lazy" decoding="async" data-fallback class="reveal h-full w-full rounded-lg object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 團隊介紹 -->
+    <section class="py-8 lg:py-11" aria-labelledby="team-title">
+      <div class="mx-auto max-w-content px-5 lg:px-8">
+        <h2 id="team-title" class="reveal text-[28px] font-bold text-ink lg:text-[40px] lg:leading-[1.25]">設計團隊</h2>
+        <p class="reveal mt-4 text-base leading-[1.7] text-ash">12 位設計與工程團隊，每一位都同時參與設計與現場。</p>
+        <div class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <article class="reveal rounded-lg bg-mist p-4 shadow-soft">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528134cf?q=80&w=900&auto=format&fit=crop" alt="主設計師 林木白 半身照" width="900" height="1200" loading="lazy" decoding="async" data-fallback class="aspect-[3/4] w-full rounded-md object-cover">
+            <h3 class="mt-4 text-lg font-medium text-ink">林木白</h3>
+            <p class="mt-1 text-sm font-medium text-clay">創辦人・主設計師</p>
+            <p class="mt-2 text-base leading-[1.7] text-ash">15 年住宅設計，專長格局重塑與木作細節。</p>
+          </article>
+          <article class="reveal rounded-lg bg-mist p-4 shadow-soft">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c98c4d32af0?q=80&w=900&auto=format&fit=crop" alt="副設計師 白雨晨 半身照" width="900" height="1200" loading="lazy" decoding="async" data-fallback class="aspect-[3/4] w-full rounded-md object-cover">
+            <h3 class="mt-4 text-lg font-medium text-ink">白雨晨</h3>
+            <p class="mt-1 text-sm font-medium text-clay">副設計師</p>
+            <p class="mt-2 text-base leading-[1.7] text-ash">材料與燈光選型專長，負責軟裝陳設主提案。</p>
+          </article>
+          <article class="reveal rounded-lg bg-mist p-4 shadow-soft">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0ee199b911?q=80&w=900&auto=format&fit=crop" alt="設計總監 陳以文 半身照" width="900" height="1200" loading="lazy" decoding="async" data-fallback class="aspect-[3/4] w-full rounded-md object-cover">
+            <h3 class="mt-4 text-lg font-medium text-ink">陳以文</h3>
+            <p class="mt-1 text-sm font-medium text-clay">設計總監</p>
+            <p class="mt-2 text-base leading-[1.7] text-ash">負責 3D 視覺化與圖面品管，10 年商業空間經驗。</p>
+          </article>
+          <article class="reveal rounded-lg bg-mist p-4 shadow-soft">
+            <img src="https://images.unsplash.com/photo-1581044464203-93a83d99b973?q=80&w=900&auto=format&fit=crop" alt="工程監造 周建宏 半身照" width="900" height="1200" loading="lazy" decoding="async" data-fallback class="aspect-[3/4] w-full rounded-md object-cover">
+            <h3 class="mt-4 text-lg font-medium text-ink">周建宏</h3>
+            <p class="mt-1 text-sm font-medium text-clay">工程監造</p>
+            <p class="mt-2 text-base leading-[1.7] text-ash">20 年工地經驗，把每一條時程管到底。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 工作室照片 -->
+    <section class="border-t border-linen py-8 lg:py-11" aria-labelledby="studio-title">
+      <div class="mx-auto max-w-content px-5 lg:px-8">
+        <h2 id="studio-title" class="reveal text-[28px] font-bold text-ink lg:text-[40px] lg:leading-[1.25]">工作室</h2>
+        <p class="reveal mt-4 text-base leading-[1.7] text-ash">位於中山區樂群一路，推門進來就是一面材質樣本牆與一整桌待討論的圖面。</p>
+        <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1200&auto=format&fit=crop" alt="工作室圖面牆：貼滿手繪草圖與材質樣本" width="1200" height="800" loading="lazy" decoding="async" data-fallback class="reveal h-56 w-full rounded-lg object-cover lg:h-64">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e158abc?q=80&w=1200&auto=format&fit=crop" alt="工作室會議區：木紋長桌與自然光" width="1200" height="800" loading="lazy" decoding="async" data-fallback class="reveal h-56 w-full rounded-lg object-cover lg:h-64">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="工作室材料庫：木皮與石材樣板整齊排列" width="1200" height="800" loading="lazy" decoding="async" data-fallback class="reveal h-56 w-full rounded-lg object-cover lg:h-64">
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 獎項／媒體 -->
+    <section class="border-t border-linen py-8 lg:py-11" aria-labelledby="awards-title">
+      <div class="mx-auto max-w-content px-5 lg:px-8">
+        <h2 id="awards-title" class="reveal text-[28px] font-bold text-ink lg:text-[40px] lg:leading-[1.25]">獎項與媒體</h2>
+        <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="reveal flex h-24 flex-col items-center justify-center rounded-lg bg-linen/60 text-center">
+            <p class="text-base font-medium text-ink">2024 金點設計獎</p>
+            <p class="mt-1 text-sm text-ash">住宅類 佳作</p>
+          </li>
+          <li class="reveal flex h-24 flex-col items-center justify-center rounded-lg bg-linen/60 text-center">
+            <p class="text-base font-medium text-ink">2023 台灣室內設計展</p>
+            <p class="mt-1 text-sm text-ash">年度精選 入選</p>
+          </li>
+          <li class="reveal flex h-24 flex-col items-center justify-center rounded-lg bg-linen/60 text-center">
+            <p class="text-base font-medium text-ink">《美麗島設計》</p>
+            <p class="mt-1 text-sm text-ash">2022 特刊專題</p>
+          </li>
+          <li class="reveal flex h-24 flex-col items-center justify-center rounded-lg bg-linen/60 text-center">
+            <p class="text-base font-medium text-ink">《Casa 住宅設計》</p>
+            <p class="mt-1 text-sm text-ash">2021 封面專題</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. 品牌價值觀 -->
+    <section class="bg-ink py-8 lg:py-11" aria-labelledby="values-title">
+      <div class="mx-auto max-w-content px-5 lg:px-8">
+        <h2 id="values-title" class="reveal text-[28px] font-bold text-mist lg:text-[40px] lg:leading-[1.25]">我們相信</h2>
+        <div class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="reveal">
+            <h3 class="font-serif text-2xl font-semibold text-clay">溫度</h3>
+            <p class="mt-3 text-base leading-[1.7] text-linen/85">材質要讓人想摸，光要讓人想賴著不走。</p>
+          </div>
+          <div class="reveal">
+            <h3 class="font-serif text-2xl font-semibold text-clay">留白</h3>
+            <p class="mt-3 text-base leading-[1.7] text-linen/85">少放一樣，多給空間一次呼吸的機會。</p>
+          </div>
+          <div class="reveal">
+            <h3 class="font-serif text-2xl font-semibold text-clay">克制</h3>
+            <p class="mt-3 text-base leading-[1.7] text-linen/85">不為炫技加東西，為生活減東西。</p>
+          </div>
+          <div class="reveal">
+            <h3 class="font-serif text-2xl font-semibold text-clay">負責</h3>
+            <p class="mt-3 text-base leading-[1.7] text-linen/85">自營施工，就是對品質與時程直接負責。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA -->
+    <section class="py-8 lg:py-11" aria-labelledby="about-cta-title">
+      <div class="mx-auto flex max-w-content flex-col items-start gap-5 px-5 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div>
+          <h2 id="about-cta-title" class="text-[28px] font-bold text-ink lg:text-[40px]">想認識更完整的木白？</h2>
+          <p class="mt-3 text-lg text-ash">歡迎來工作室坐坐，帶你看材質樣本。</p>
+        </div>
+        <a href="contact.html" class="inline-flex h-12 shrink-0 items-center rounded-md bg-clay px-8 text-base font-medium text-white transition-colors hover:bg-clay-hover active:scale-[.98]">預約諮詢</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink py-8 lg:py-9">
+    <div class="mx-auto grid max-w-content grid-cols-1 gap-8 px-5 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div>
+        <a href="index.html" class="flex items-center gap-3" aria-label="木白室內設計">
+          <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#A65E3F"/><text x="16" y="22" font-family="Georgia,serif" font-size="18" fill="#F7F5F2" text-anchor="middle">M</text></svg>
+          <span class="text-lg font-bold text-mist">木白室內設計</span>
+        </a>
+        <p class="mt-4 text-base leading-[1.6] text-stone">讓空間，回歸生活的本質。</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-medium text-stone">聯絡</h3>
+        <ul class="mt-4 space-y-3 text-base text-linen">
+          <li><a href="tel:02-2312-8899" class="hover:text-clay hover:underline hover:underline-offset-4">02-2312-8899</a></li>
+          <li><a href="mailto:hello@mubai.design" class="hover:text-clay hover:underline hover:underline-offset-4">hello@mubai.design</a></li>
+          <li class="text-stone">台北市中山區樂群一路 88 號 3F</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-medium text-stone">服務導覽</h3>
+        <ul class="mt-4 space-y-3 text-sm text-linen">
+          <li><a href="services.html" class="hover:text-clay hover:underline hover:underline-offset-4">住宅設計</a></li>
+          <li><a href="services.html" class="hover:text-clay hover:underline hover:underline-offset-4">空間規劃</a></li>
+          <li><a href="services.html" class="hover:text-clay hover:underline hover:underline-offset-4">施工監造</a></li>
+          <li><a href="services.html" class="hover:text-clay hover:underline hover:underline-offset-4">軟裝陳設</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-medium text-stone">社群</h3>
+        <div class="mt-4 flex items-center gap-4">
+          <a href="#" aria-label="Instagram" class="flex h-11 w-11 items-center justify-center rounded-full border border-linen/30 text-linen hover:text-clay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="flex h-11 w-11 items-center justify-center rounded-full border border-linen/30 text-linen hover:text-clay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h2.5V5H14c-2.2 0-4 1.8-4 4v2H8v3h2v8h3v-8h2.3l.7-3H13V9c0-.6.4-1 1-1z"/></svg>
+          </a>
+          <a href="#" aria-label="Line" class="flex h-11 w-11 items-center justify-center rounded-full border border-linen/30 text-linen hover:text-clay">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 4 3.6 7.3 8.4 7.9.3.1.6.2.7.5.1.3.1.6.1.9v.3c0 .3-.2.5-.5.4-1.2-.3-3-1-4.1-1.9-.3-.3-.7-.2-.9.1-.2.3-.2.7 0 .9 1.3 1.6 3.7 2.5 6.3 2.5 5.5 0 10-3.6 10-8S17.5 3 12 3zM8.3 12.8H7a.5.5 0 0 1-.5-.5V9.3c0-.3.2-.5.5-.5s.5.2.5.5v2.4h1.3c.3 0 .5.2.5.5s-.2.6-.5.6zm2.2-.6c0 .3-.2.5-.5.5s-.5-.2-.5-.5V9.3c0-.3.2-.5.5-.5s.5.2.5.5zm3.4.6c-.1 0-.3-.1-.4-.2l-1.5-1.5v1.7c0 .3-.2.5-.5.5s-.5-.2-.5-.5V9.3c0-.3.2-.5.5-.5s.5.2.5.5v.9l1.5-1.5c.2-.2.5-.2.7 0s.2.5 0 .7l-1.3 1.3 1.3 1.3c.2.2.2.5 0 .7-.1.1-.3.1-.3.1zm3.5-.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5V9.3c0-.3.2-.5.5-.5s.5.2.5.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-8 max-w-content border-t border-linen/15 px-5 pt-5 lg:px-8">
+      <p class="text-sm text-stone">© 2026 木白室內設計 MuBai Studio．版權所有。</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

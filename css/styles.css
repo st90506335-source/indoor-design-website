@@ -1,0 +1,155 @@
+/* 木白室內設計 MuBai Studio — 全站自訂樣式
+   （Tailwind 由 Play CDN 提供，此檔放 CDN 覆蓋不了的元件細節） */
+
+/* ---------- 焦點樣式（全站統一） ---------- */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #A65E3F;
+  outline-offset: 2px;
+}
+
+/* ---------- Hero 疊層漸層（UI 規格 §2.1） ---------- */
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(20,19,18,.72) 0%, rgba(20,19,18,.35) 55%, transparent 85%);
+}
+@media (max-width: 767px) {
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(20,19,18,.25) 0%, rgba(20,19,18,.72) 100%);
+  }
+}
+
+/* ---------- 導覽列收縮 ---------- */
+#site-nav {
+  transition: background-color .2s ease, box-shadow .2s ease;
+}
+#site-nav .nav-inner {
+  height: 72px;
+  transition: height .2s ease;
+}
+#site-nav.scrolled .nav-inner { height: 56px; }
+#site-nav.scrolled {
+  background: rgba(247,245,242,.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 8px rgba(28,27,26,.08);
+}
+#site-nav.scrolled .brand-mark { transform: scale(.85); }
+.brand-mark { transition: transform .2s ease; }
+
+/* ---------- 手機抽屜（右側滑入 85vw） ---------- */
+#drawer-overlay {
+  transition: opacity .25s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+#drawer {
+  transition: transform .25s ease;
+  transform: translateX(100%);
+}
+.drawer-open #drawer-overlay { opacity: 1; pointer-events: auto; }
+.drawer-open #drawer { transform: translateX(0); }
+body.no-scroll { overflow: hidden; }
+
+/* ---------- 作品卡片（UI 規格 §2.3） ---------- */
+.work-card .work-img {
+  transform: scale(1);
+  transition: transform .4s ease;
+}
+.work-card .work-mask {
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.work-card .work-hover-cta {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.work-card:hover .work-img,
+.work-card:focus-visible .work-img { transform: scale(1.04); }
+.work-card:hover .work-mask,
+.work-card:focus-visible .work-mask { opacity: 1; }
+.work-card:hover .work-hover-cta,
+.work-card:focus-visible .work-hover-cta { opacity: 1; transform: translateY(0); }
+
+/* ---------- 服務卡片 hover（UI 規格 §2.2） ---------- */
+.service-card { transition: transform .25s ease, box-shadow .25s ease; }
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(28,27,26,.14);
+}
+.service-card .link-arrow { transition: transform .25s ease; }
+.service-card:hover .link-arrow { transform: translateX(4px); }
+
+/* ---------- 案例列 hover（UI 規格 §2.4） ---------- */
+.case-row { transition: background-color .2s ease; }
+.case-row:hover { background: #F7F5F2; }
+.case-row .case-thumb { transition: transform .2s ease; }
+.case-row:hover .case-thumb { transform: scale(1.03); }
+.case-row .case-arrow { transition: transform .2s ease; }
+.case-row:hover .case-arrow { transform: translateX(4px); }
+
+/* ---------- 作品篩選 pill ---------- */
+.filter-pill {
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.work-item {
+  transition: opacity .2s ease;
+}
+.work-item.hidden-fade { display: none; }
+.work-item.fading { opacity: 0; }
+
+/* ---------- 表單 ---------- */
+.field-input {
+  height: 48px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.field-input:focus {
+  border-color: #A65E3F;
+  box-shadow: 0 0 0 3px rgba(166,94,63,.25);
+}
+.field-input.has-error {
+  border-color: #B0413E;
+}
+.field-input.has-error:focus {
+  box-shadow: 0 0 0 3px rgba(176,65,62,.25);
+}
+.spinner {
+  width: 1em; height: 1em;
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  display: inline-block;
+  vertical-align: -0.15em;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- 骨架/佔位（圖片載入失敗回退） ---------- */
+.img-fallback {
+  background: #EDE9E3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6E675F;
+  font-size: 14px;
+}
+
+/* ---------- 數字滾動（統計條） ---------- */
+.stat-number { font-variant-numeric: tabular-nums; }
+
+/* ---------- 顯現動畫（尊重 prefers-reduced-motion） ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.reveal.revealed { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .work-card .work-img { transform: none !important; }
+  .service-card:hover { transform: none; }
+}
